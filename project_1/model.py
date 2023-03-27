@@ -29,7 +29,14 @@ def add_contact(contact: dict):
 def change_contact(contact: dict, index: int):
     phone_book.pop(index - 1)
     phone_book.insert(index - 1, contact)
-        
+    
+def find_contact(search: str) -> list[dict]:
+    result = []
+    for contact in phone_book:
+        for field in contact.values():
+            if search.lower() in field.lower():
+                result.append(contact)
+    return result    
 
         
         

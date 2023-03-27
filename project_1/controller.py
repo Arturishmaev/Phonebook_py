@@ -25,6 +25,10 @@ def start():
                     model.change_contact(contact, index)
                     view.show_message(f'Контакт {model.get_phone_book()[index - 1].get("name")} успешно изменен!')
             case 6:
+                search = view.input_search('Введите искомый контакт: ')
+                result = model.find_contact(search)
+                view.show_contacts(result, 'Контакты не найдены')
+            case 7:
                 return
                 
     
