@@ -29,6 +29,8 @@ def start():
                 result = model.find_contact(search)
                 view.show_contacts(result, 'Контакты не найдены')
             case 7:
+                model.delete(contact)
+            case 8:
                 return
                 
     

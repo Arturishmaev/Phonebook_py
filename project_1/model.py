@@ -36,7 +36,10 @@ def find_contact(search: str) -> list[dict]:
         for field in contact.values():
             if search.lower() in field.lower():
                 result.append(contact)
-    return result    
+    return result  
+
+def delete(index: int):
+    phone_book.pop(index)  
 
         
         
